@@ -1,0 +1,43 @@
+Public Class BaseClass
+    Public Sub PublicMethod()
+        Console.WriteLine("This is a public method.")
+    End Sub
+
+    Private Sub PrivateMethod()
+        Console.WriteLine("This is a private method.")
+    End Sub
+
+    Protected Sub ProtectedMethod()
+        Console.WriteLine("This is a protected method.")
+    End Sub
+
+    Friend Sub InternalMethod()
+        Console.WriteLine("This is an internal method.")
+    End Sub
+
+    Protected Friend Sub ProtectedInternalMethod()
+        Console.WriteLine("This is a protected internal method.")
+    End Sub
+End Class
+
+Public Class DerivedClass
+    Inherits BaseClass
+
+    Public Sub AccessProtectedMethod()
+        ProtectedMethod()
+    End Sub
+End Class
+
+Class Program
+    Private Shared Sub Main(ByVal args As String())
+        Dim baseObj As BaseClass = New BaseClass()
+        baseObj.PublicMethod()
+        baseObj.InternalMethod()
+		baseObj.PrivateMethod()
+        baseObj.ProtectedMethod()
+        baseObj.ProtectedInternalMethod()
+        Dim derivedObj As DerivedClass = New DerivedClass()
+        derivedObj.AccessProtectedMethod()
+        Console.ReadKey()
+    End Sub
+End Class
