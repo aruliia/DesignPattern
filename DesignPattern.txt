@@ -1,0 +1,44 @@
+Namespace DesignPatternSample
+    Interface ICarSupplier
+        Private ReadOnly Property CarColor As String
+        Sub GetCarModel()
+    End Interface
+
+    Class Honda
+        Implements ICarSupplier
+
+        Public ReadOnly Property CarColor As String
+            Get
+                Return "RED"
+            End Get
+        End Property
+
+        Public Sub GetCarModel()
+            Console.WriteLine("Honda Car Model is Honda 2014")
+        End Sub
+    End Class
+
+    Class BMW
+        Implements ICarSupplier
+
+        Public ReadOnly Property CarColor As String
+            Get
+                Return "WHITE"
+            End Get
+        End Property
+
+        Public Sub GetCarModel()
+            Console.WriteLine("BMW Car Model is BMW 2000")
+        End Sub
+    End Class
+
+    Class ClientProgram
+        Private Shared Sub Main(ByVal args As String())
+            Dim objHonda As Honda = New Honda()
+            objHonda.GetCarModel()
+            Dim objBMW As BMW = New BMW()
+            objBMW.GetCarModel()
+            Console.ReadLine()
+        End Sub
+    End Class
+End Namespace
