@@ -1,0 +1,26 @@
+Imports System
+
+Public Class User
+    Public Property Username As String
+    Public Property Email As String
+    Public Username As Object
+    Public Email As Object
+
+    Public Sub New(ByVal username As String, ByVal email As String)
+        Username = username
+        Email = email
+    End Sub
+
+    Public Sub DisplayUserInfo()
+        Console.WriteLine($"Username: {Username}")
+        Console.WriteLine($"Email: {Email}")
+    End Sub
+End Class
+
+Class Program
+    Private Shared Sub Main(ByVal args As String())
+        Dim user1 As User = New User("john_doe", "john@example.com")
+        Console.WriteLine("User Information:")
+        user1.DisplayUserInfo()
+    End Sub
+End Class
