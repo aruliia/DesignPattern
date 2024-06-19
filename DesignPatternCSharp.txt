@@ -1,0 +1,50 @@
+interface ICarSupplier
+    {
+        private string CarColor { get; }
+        void GetCarModel();
+    }
+
+    class Honda : ICarSupplier
+    {
+        public string CarColor
+        {
+            get
+            {
+                return "RED";
+            }
+        }
+
+        public void GetCarModel()
+        {
+            Console.WriteLine("Honda Car Model is Honda 2014");
+        }
+    }
+
+    class BMW : ICarSupplier
+    {
+        public string CarColor
+        {
+            get
+            {
+                return "WHITE";
+            }
+        }
+
+        public void GetCarModel()
+        {
+            Console.WriteLine("BMW Car Model is BMW 2000");
+        }
+    }
+
+    class ClientProgram
+    {
+        private static void Main(string[] args)
+        {
+            Honda objHonda = new Honda();
+            objHonda.GetCarModel();
+            BMW objBMW = new BMW();
+            objBMW.GetCarModel();
+            Console.ReadLine();
+        }
+    }
+}
