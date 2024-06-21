@@ -31,22 +31,21 @@ class Example {
 		
 		Company c2 = (Company)c1.DeepCopy();  
   
-        Console.WriteLine("Before Changing: "); 
-        Console.WriteLine(c1.GBRank); 
-        Console.WriteLine(c2.GBRank); 
-        Console.WriteLine(c2.desc.CompanyName); 
-        Console.WriteLine(c1.desc.CompanyName); 
-  
-        Console.WriteLine("\nAfter Changing: "); 
-          
-        c2.GBRank = 59; 
-        c2.desc.CompanyName = "GFG"; 
-  
-        Console.WriteLine(c1.GBRank); 
-        Console.WriteLine(c2.GBRank); 
-        Console.WriteLine(c2.desc.CompanyName); 
-        Console.WriteLine(c1.desc.CompanyName); 
-		
+	        Console.WriteLine("Before Changing: "); 
+	        Console.WriteLine(c1.GBRank); 
+	        Console.WriteLine(c2.GBRank); 
+	        Console.WriteLine(c2.desc.CompanyName); 
+	        Console.WriteLine(c1.desc.CompanyName); 
+	  
+	        Console.WriteLine("\nAfter Changing: "); 
+	          
+	        c2.GBRank = 59; 
+	        c2.desc.CompanyName = "GFG"; 
+	  
+	        Console.WriteLine(c1.GBRank); 
+	        Console.WriteLine(c2.GBRank); 
+	        Console.WriteLine(c2.desc.CompanyName); 
+	        Console.WriteLine(c1.desc.CompanyName); 		
 	} 
 } 
 
