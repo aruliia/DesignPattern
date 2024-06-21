@@ -5,8 +5,7 @@ class Example {
 	// Main Method 
 	static void Main(string[] args) 
 	{ 
-		Company c1 = new Company(548, "GeeksforGeeks", 
-									"IIA"); 
+		Company c1 = new Company(548, "GeeksforGeeks", "IIA"); 
 		
 		Company c2 = (Company)c1.Shallowcopy(); 
 
