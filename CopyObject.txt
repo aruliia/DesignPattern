@@ -55,8 +55,7 @@ class Company
 	public int GBRank; 
 	public CompanyDescription desc; 
 	
-	public Company(int gbRank, string c, 
-							string o) 
+	public Company(int gbRank, string c, string o) 
 	{ 
 		this.GBRank = gbRank; 
 		desc = new CompanyDescription(c, o); 
@@ -71,8 +70,7 @@ class Company
 	// method for cloning object 
 	public Company DeepCopy() 
 	{ 
-		Company deepcopyCompany = new Company(this.GBRank, 
-							desc.CompanyName, desc.Owner); 
+		Company deepcopyCompany = new Company(this.GBRank, desc.CompanyName, desc.Owner); 
 		return deepcopyCompany; 
 	} 
 } 	
